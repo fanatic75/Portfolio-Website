@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
-import { ThemeProvider,withTheme } from '@material-ui/styles';
+import { ThemeProvider, withTheme } from '@material-ui/styles';
 import { createMuiTheme } from "@material-ui/core/styles";
 import Routes from "./Routes";
 import "./styles/App.css";
@@ -19,10 +19,10 @@ const theme = createMuiTheme({
 const App: React.FC = () => {
   return (
     <Router>
-       <ThemeProvider theme={theme}>
-      <div className="App">
-        <Routes />
-      </div>
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          <Routes />
+        </div>
       </ThemeProvider>
     </Router>
 

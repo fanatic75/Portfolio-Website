@@ -54,7 +54,7 @@ const NavigationRef = (props : {navigation:boolean}) => {
                 <Link style={linksStyle} className={classes.links} to="/about"><h2  className={classes.h2}>ABOUT</h2></Link>
             </div>
             <div className={classes.linksContainer} >
-                <Link style={linksStyle} className={classes.links} to="/projects"><h2  className={classes.h2}>PORTFOLIO</h2></Link>
+                <Link style={linksStyle} className={classes.links} to="/portfolio"><h2  className={classes.h2}>PORTFOLIO</h2></Link>
             </div>
             <div className={classes.linksContainer} >
                 <Link  style={linksStyle} className={classes.links} to="/contact"><h2  className={classes.h2}>CONTACT</h2></Link>

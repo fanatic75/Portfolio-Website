@@ -12,7 +12,7 @@ const ThemeSwitch: any = (props: { theme: { spacing: Function } }) => {
     const darkMode = useDarkMode();
     return (
         <div >
-            <label>
+            
                 <Toggle
                     style={{ padding: props.theme.spacing(3) }}
                     icons={{
@@ -38,7 +38,7 @@ const ThemeSwitch: any = (props: { theme: { spacing: Function } }) => {
                     checked={darkMode.value}
                     onChange={darkMode.toggle}
                 />
-            </label>
+           
         </div>
     )
 }
