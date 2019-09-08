@@ -1,7 +1,7 @@
 .header-container {
     display: flex;
     flex-direction: row;
-    padding: 1em 0;
+    padding: .2em 0;
     justify-content: space-between;
    }
    .logo img {
@@ -9,7 +9,7 @@
    }
    nav {
     align-self: center;
-    position:absolute;
+    position:relative;
     right:60px;
    }
    nav>ul{
@@ -18,12 +18,27 @@
    nav>div{
        display:inline;
        position: relative;
-       top:6px;
+       top:3px;
    }
    header ul li {
     display: inline-block;
     padding: 0 1.4em 0 0;
     font-size: 0.9em;
+    
+   }
+   header h2{
+       font-family:Roboto
+   }
+   header li::after {
+    display: block;
+    height: 1.5px;
+    background: #d21919;
+    content: '';
+    transform: scaleX(0);
+    transition: transform 0.6s ease-out;
+   }
+   header li:hover::after{
+       transform:scaleX(0.5);
    }
    
    .dark-border{
@@ -39,3 +54,4 @@
            top:-10px;
        }
    }
+   

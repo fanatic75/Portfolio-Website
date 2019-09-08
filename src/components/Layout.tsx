@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { withTheme } from '@material-ui/styles';
 import PropTypes from "prop-types";
 import { useMedia } from "use-media";
 import Header from "./header"
@@ -40,16 +39,19 @@ const Layout : any = ( props : {children:HTMLElement}) => {
                
             }
            
-          <main >{props.children}</main>
-          {!isWide && buttonNav}
+          <main >{props.children}
           <footer>
-            © {new Date().getFullYear()}, Built with
+            © {new Date().getFullYear()}, Built by
           {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            <a href="https://prateek.engineer">Prateek Banga</a>
           </footer>
+          
+          </main>
+          {!isWide && buttonNav}
+          
         </div>
 
-
+       
 
 
     </>
@@ -60,4 +62,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default withTheme(Layout)
+export default Layout
