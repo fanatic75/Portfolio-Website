@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import { withTheme } from '@material-ui/styles';
 import useMedia from "use-media";
 import {Logo} from "./Logo";
 import "../styles/header.css";
@@ -46,4 +45,4 @@ const Header = () => {
 }
 
 
-export default withTheme(Header);
+export default Header;

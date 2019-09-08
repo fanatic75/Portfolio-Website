@@ -3,18 +3,16 @@ import React from "react";
 import Toggle from "react-toggle";
 import sun from '../assets/sun.png';
 import moon from "../assets/moon.png"
-import { withTheme } from "@material-ui/styles";
 import useDarkMode from "use-dark-mode";
 import "../styles/toggle.css";
 
-const ThemeSwitch: any = (props: { theme: { spacing: Function } }) => {
+const ThemeSwitch: any = () => {
 
     const darkMode = useDarkMode();
     return (
         <div >
             
                 <Toggle
-                    style={{ padding: props.theme.spacing(3) }}
                     icons={{
                         checked: (
                             <img
@@ -43,4 +41,4 @@ const ThemeSwitch: any = (props: { theme: { spacing: Function } }) => {
     )
 }
 
-export default withTheme(ThemeSwitch);
+export default ThemeSwitch;
