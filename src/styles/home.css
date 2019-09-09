@@ -5,7 +5,7 @@
   flex-direction: column;
   -webkit-animation: bounceInUp 1s ease-in-out;
   animation: bounceInUp 1s ease-in-out;
-  height: 95%;
+  margin-top:40%;
 }
 
 .greeting-container h1>span {
@@ -23,6 +23,9 @@
 @media screen and (min-width:700px){
   .greeting-container h1 {
     font-size:3.9em;
+  }
+  .greeting-container{
+    margin-top:10%;
   }
   
   .greeting-container p {

@@ -19,7 +19,7 @@ const NavigationRef = (props : {navigation:boolean}) => {
         unmountOnExit
         mountOnEnter
         >
-        <div style = {{transform:!props.navigation&&"translate3d(0,100%,0)"} as React.CSSProperties}  className={["root","paper",darkMode.value?"dark-mode-background":"light-mode-background","remove-scrollbar"].join(" ")} >
+        <div style = {{transform:!props.navigation&&"translate3d(0,100%,0)"} as React.CSSProperties}  className={["root",darkMode.value?"dark-mode-background":"light-mode-background","remove-scrollbar"].join(" ")} >
             <div className={"linksContainer"} >
                 <Link style={linksStyle} className={"links"} to="/"><h2 className={"h2"}>HOME</h2></Link>
             </div>

@@ -3,6 +3,22 @@ html {
   -webkit-text-size-adjust: 100%;
   height:100%;
 }
+
+.a-decoration::after {
+  display: block;
+  height: 1.5px;
+  background: #d21919;
+  content: '';
+  transform: scaleX(0);
+  transition: transform 0.6s ease-out;
+ }
+.a-decoration:hover::after{
+     transform:scaleX(0.5);
+ }
+
+ .heading{
+  text-align: center
+}
 a{
   cursor: pointer;
   outline:none;
@@ -13,20 +29,36 @@ a:active, a:focus, a:hover{
 body {
   margin: 0;
   height:100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  
 }
+::-webkit-scrollbar {
+  display: none;
+}
+
+.buttonNav{
+  display:block;
+}
+
+@media only screen and (min-width:700px){
+  .buttonNav{
+    display:none;
+  }
+}
+
+footer{
+  position:relative;
+  bottom:0px;
+  
+  margin: 1.25rem auto;
+  padding: 0px 1.0875rem ;
+  padding-top: 0;
+}
+
 #root,.App{
   height:100%;
 }
 body>div>div>header{
   height: 20%;
-}
-body>div>div>div{
-  height:70%;
-}
-body>div>div>div>main{
-  height:100%;
 }
 article,
 aside,
@@ -135,6 +167,7 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
+  height:auto;
   margin-bottom: 1.45rem;
 }
 h1 {
@@ -179,7 +212,7 @@ h3 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -248,7 +281,9 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
+  word-spacing: 2.5px;
   margin-bottom: 1.45rem;
+  font-size:1.2rem;
 }
 noscript {
   margin-left: 0;

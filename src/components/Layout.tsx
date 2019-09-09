@@ -18,7 +18,7 @@ const Layout : any = ( props : {children:HTMLElement}) => {
   },[navigation]);
 
 
-  const buttonNav = <ButtonNav navigation={navigation} showNavigation={showNavigation} />
+  const buttonNav = <ButtonNav navigation={navigation} className={"buttonNav"} showNavigation={showNavigation} />
 
   return (
     <>
@@ -27,7 +27,7 @@ const Layout : any = ( props : {children:HTMLElement}) => {
         <div
           style={{
             margin: `1.25rem auto`,
-            padding: `0px 1.0875rem 1.45rem`,
+            padding: `0px 1.0875rem `,
             paddingTop: 0,
           }}
         >
@@ -39,17 +39,14 @@ const Layout : any = ( props : {children:HTMLElement}) => {
                
             }
            
-          <main >{props.children}
-          <footer>
-            © {new Date().getFullYear()}, Built by
-          {` `}
-            <a href="https://prateek.engineer">Prateek Banga</a>
-          </footer>
+          <main>{props.children}
+         
           
           </main>
-          {!isWide && buttonNav}
+          {buttonNav}
           
         </div>
+        
 
        
 
