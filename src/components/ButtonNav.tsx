@@ -2,7 +2,6 @@ import React, {useEffect,useRef} from "react";
 const buttonContainer = {
     height:"62px",
     width:"62px",
-    display : "block",
     backgroundColor : "#20232a",
     color: "#61dafb",
     cursor:"pointer",
@@ -21,7 +20,7 @@ const leftCross = {transform: "translate(2px, 8px) rotate(180deg)",transition: "
 const rightCross = {transform: "translate(2px, -8px)", transition: "-webkit-transform 0.2s ease 0s, transform 0.2s ease 0s"} as React.CSSProperties;
 
 
-export const ButtonNav = (props:{navigation:boolean,showNavigation:React.Dispatch<React.SetStateAction<boolean>>}) => {
+export const ButtonNav = (props:{className:string,navigation:boolean,showNavigation:React.Dispatch<React.SetStateAction<boolean>>}) => {
     
     const button : React.MutableRefObject<HTMLDivElement | null | undefined> = useRef();
     const {navigation,showNavigation} =props;
@@ -31,7 +30,6 @@ export const ButtonNav = (props:{navigation:boolean,showNavigation:React.Dispatc
             const buttonNode:Node|HTMLElement|undefined|null = button.current;
             if(buttonNode!==undefined&&buttonNode!=null)
             if( buttonNode.contains(e.target) ){
-              
                showNavigation(!navigation)
             }
         }
@@ -41,7 +39,7 @@ export const ButtonNav = (props:{navigation:boolean,showNavigation:React.Dispatc
    
 
     return (
-    <div ref={button as string | ((instance: HTMLDivElement | null) => void) | React.RefObject<HTMLDivElement> | null | undefined } style={buttonContainer}>
+    <div className={props.className} ref={button as string | ((instance: HTMLDivElement | null) => void) | React.RefObject<HTMLDivElement> | null | undefined } style={buttonContainer}>
         <div style={{paddingLeft:"20px",paddingRight:"20px",marginLeft:"auto",marginRight:"auto",display:"flex"}}>
             <div style={{height:"60px",overflow:"hidden",alignItems:"flex-start",display:"flex",boxAlign:"start",flexDirection:"row"}}>
                 <div style={{width:"20px",height:"20px",display:"flex",alignSelf:"center",flexDirection:"column"}}>
