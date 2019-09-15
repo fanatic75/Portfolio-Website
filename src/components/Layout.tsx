@@ -27,7 +27,7 @@ const Layout : any = ( props : {children:HTMLElement}) => {
         <div
           style={{
             margin: `1.25rem auto`,
-            padding: `0px 1.0875rem `,
+            padding: `0px 1.9875rem `,
             paddingTop: 0,
           }}
         >
