@@ -8,12 +8,13 @@ const Portfolio:React.FC = () => {
   return (
   <Layout>
         <h1 className="heading">Projects</h1>
-
+    <div className="projects-container">
     {
       projects.map(project=>{
         return <Card key={project.key} image={project.image} title={project.title} content={project.content} github={project.github}/>
       })
     }
+    </div>
     
   </Layout>
 )}

@@ -24,7 +24,7 @@ const Card: React.FC<project> = (props: project) => {
     }
     return (
         <div style={{backgroundColor:darkMode.value?"#1e1e1e":"#fff"}} className="card-root">
-            <button type="button" tabIndex={0} className={["card-action-area-root", "base-button-root", !isWide ? "ripple" : ""].join(" ")}>
+            <button type="button" tabIndex={0} onClick={() => props.github?window.location.href = props.github:""} className={["card-action-area-root", "base-button-root", !isWide ? "ripple" : ""].join(" ")}>
                 <div style={props.image&&{backgroundImage:`url("/${props.image.url}")`,height:props.image.height}} title={props.image&&props.image.title} className="card-media-root" />
                 <div className="card-content-root">
                     <h2>{props.title}</h2>
