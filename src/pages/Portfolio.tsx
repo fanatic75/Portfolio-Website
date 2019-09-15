@@ -1,17 +1,20 @@
 import React from "react"
 import Layout from "../components/Layout";
 import Card from "../components/Card";
+import projects from "../data/projects";
 
-const urlStyle: React.CSSProperties = {
-  backgroundImage:"url(/src/assets/logo.png)"
-}
 
 const Portfolio:React.FC = () => {
   return (
   <Layout>
-    <Card image={{url:urlStyle ,title:"Hello"}} title="Hey" content="what up card" github={{href:"https://github.com"}}/>
-    <Card image={{url:urlStyle ,title:"Hello"}} title="Hey" content="what up card" github={{href:"https://github.com"}}/>
+        <h1 className="heading">Projects</h1>
 
+    {
+      projects.map(project=>{
+        return <Card key={project.key} image={project.image} title={project.title} content={project.content} github={project.github}/>
+      })
+    }
+    
   </Layout>
 )}
 

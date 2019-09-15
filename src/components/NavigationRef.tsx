@@ -9,7 +9,7 @@ import {CSSTransition} from 'react-transition-group'
 
 const NavigationRef = (props : {navigation:boolean}) => {
     const darkMode =  useDarkMode();
-    const linksStyle= {color:darkMode.value?"#fff":"#212121"}
+    const linksStyle= {color:darkMode.value?"#cbcbcb":"#212121"}
   
     return (
         <CSSTransition

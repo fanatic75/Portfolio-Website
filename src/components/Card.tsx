@@ -1,10 +1,10 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import useMedia from "use-media";
-import { UrlObjectCommon } from "url";
-
-
-const Card: React.FC<cardProps> = (props: cardProps) => {
+import useDarkMode from "use-dark-mode";
+import {project} from "../types/module";
+const Card: React.FC<project> = (props: project) => {
     const isWide: boolean = useMedia({ minWidth: 700 });
+    const darkMode = useDarkMode();
     async function shareMenu(): Promise<void> {
         try {
             //@ts-ignore
@@ -13,7 +13,7 @@ const Card: React.FC<cardProps> = (props: cardProps) => {
                 await navigator.share({
                     title: props.title,
                     text: "Check out " + props.title,
-                    url: props.github.href,
+                    url: props.github&&props.github,
                 })
             }
 
@@ -23,12 +23,12 @@ const Card: React.FC<cardProps> = (props: cardProps) => {
         }
     }
     return (
-        <div className="card-root">
+        <div style={{backgroundColor:darkMode.value?"#1e1e1e":"#fff"}} className="card-root">
             <button type="button" tabIndex={0} className={["card-action-area-root", "base-button-root", !isWide ? "ripple" : ""].join(" ")}>
-                <div style={props.image.url} title={props.image.title} className="card-media-root" />
+                <div style={props.image&&{backgroundImage:`url("/${props.image.url}")`,height:props.image.height}} title={props.image&&props.image.title} className="card-media-root" />
                 <div className="card-content-root">
                     <h2>{props.title}</h2>
-                    <p>{props.content}</p>
+                    <p style={{marginBottom:"0px"}}>{props.content}</p>
                 </div>
             </button>
             <div className="card-actions-root">
@@ -39,7 +39,7 @@ const Card: React.FC<cardProps> = (props: cardProps) => {
                 }
                 {
                     //@ts-ignore
-                    <button onClick={() => window.location.href = props.github.href} type="button" tabIndex={0} className={["card-action-button", "base-button-root", !isWide ? "ripple" : ""].join(" ")}>
+                    <button onClick={() => props.github?window.location.href = props.github:""} type="button" tabIndex={0} className={["card-action-button", "base-button-root", !isWide ? "ripple" : ""].join(" ")}>
                         LEARN MORE
                 </button>
                 }
@@ -50,12 +50,3 @@ const Card: React.FC<cardProps> = (props: cardProps) => {
 }
 export default Card;
 
-type cardProps = {
-    image: {
-        url: CSSProperties,
-        title: string
-    },
-    title: string,
-    content: string,
-    github: UrlObjectCommon
-}

@@ -4,7 +4,7 @@ import useDarkMode from "use-dark-mode";
 export  const Logo = ()=>{
 	const darkMode = useDarkMode();
     return(
-     <svg style={{height:"100%"}}  fill={darkMode.value?"#fff":"black"} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+     <svg style={{height:"100%"}}  fill={darkMode.value?"#cbcbcb":"black"} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
 	 width="130px" height="130px"  viewBox="0 0 612 612"  >
 <g>
 	<g>
