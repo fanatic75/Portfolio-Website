@@ -6,7 +6,8 @@ const projects: project[] = [
         image:{
             url:"lamp.png",
             title:"Lamp",
-            height:"340px"
+            height:"340px",
+            backgroundSize:"contain"
         },
         title:"Dyfo Lite",
         content:"Now control your lamps with a touch of your Finger",
@@ -17,7 +18,8 @@ const projects: project[] = [
         image: {
             url: "bitchat.png",
             title: "Logo",
-            height:"313px"
+            height:"313px",
+            backgroundSize:"contain"
         },
         title: "Bit Chat",
         content: "Shy in Life? Hang out virtually and make new Friends. Anonymous Chatting Client for Our College. ",
@@ -27,7 +29,8 @@ const projects: project[] = [
         image: {
             url: "blockchain.png",
             title: "Blockchain explanation",
-            height:"313px"
+            height:"313px",
+            backgroundSize:"cover"
         },
         title: "A Simple Blockchain",
         content: "A Blockchain written in java which uses SHA256 algorithm for hashing. Block Difficulty can be increased.",
@@ -37,7 +40,8 @@ const projects: project[] = [
         image: {
             url: "breakout.gif",
             title: "Breakout Game",
-            height:"313px"
+            height:"313px",
+            backgroundSize : "contain"
         },
         title: "Breakout",
         content: "Breakout, a game built in java when I was taking the class of Prof. Mehran Sahami. Best Teacher of my life, hands down.",
@@ -47,7 +51,8 @@ const projects: project[] = [
         image: {
             url: "quiz.png",
             title: "Logo",
-            height:"313px"
+            height:"313px",
+            backgroundSize:"contain"
         },
         title: "Quiz App",
         content: "A simple yet elegant quiz app written in vanilla JS. ",
