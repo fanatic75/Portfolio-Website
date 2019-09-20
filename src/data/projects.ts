@@ -59,5 +59,4 @@ const projects: project[] = [
         github:"https://github.com/fanatic75/QuizApp.git"
     }
 ];
-
 export default projects;
