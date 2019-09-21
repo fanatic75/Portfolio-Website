@@ -23,7 +23,7 @@ const About: React.FC = () => (
       
      
         <a className="bat-container" href="https://brave.com/bit451">
-        <img src={slogan} width="70%"alt="Brave Slogan"/>
+        <img src={slogan} style={{transform:"scale(0.8)"}} width="70%"alt="Brave Slogan"/>
         <img src={logo} alt="BAT Token" />
         </a>
       
