@@ -1,5 +1,4 @@
 import {project} from "../types/module";
-
 const projects: project[] = [
     {
         key:1,

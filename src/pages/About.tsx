@@ -9,8 +9,13 @@ const About: React.FC = () => (
     <h1 className="heading">About Me</h1>
     <div className="about-container">
 
-      <p>
-        <img className="mypicture" src={me} alt="Myself" /></p>
+        <figure>
+          {
+            //@ts-ignore
+           <img className="mypicture" loading="eager" src={me} alt="Myself" />
+          }
+          <figcaption><button onClick={()=>window.location.href="https://drive.google.com/file/d/1j2kr89f1P8KFgMn6jMv63J0O67gPwyDa/view?usp=sharing"} type="button" style={{width:"40%",height:"44px"}} className="mtrl-btn">    Resume   </button></figcaption>
+        </figure> 
       <p>A Full-Stack Developer based from Mathura, currently residing in Bangalore, pursuing BTech from  <strong>Bangalore Institute Of Technology</strong>.
        Talk to me about problem-solving, Crytpocurrencies, Web Development.I code in Javascript, Typescript & Java. Currently My working stack is
          ReactJS, NodeJS, NOSQL DB. In my free time, I like to listen to  rock music and read tech related news.</p>
