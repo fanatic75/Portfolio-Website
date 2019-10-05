@@ -4,6 +4,7 @@ import slogan from "../assets/bat.png";
 import logo from "../assets/bat.svg";
 import Layout from "../components/Layout";
 import "../styles/about.css";
+import useDarkMode from "use-dark-mode";
 const About: React.FC = () => (
   <Layout>
     <h1 className="heading">About Me</h1>
@@ -11,10 +12,11 @@ const About: React.FC = () => (
 
         <figure>
           {
+  
             //@ts-ignore
            <img className="mypicture" loading="eager" src={me} alt="Myself" />
           }
-          <figcaption><button onClick={()=>window.location.href="https://drive.google.com/file/d/1j2kr89f1P8KFgMn6jMv63J0O67gPwyDa/view?usp=sharing"} type="button" style={{width:"40%",height:"44px"}} className="mtrl-btn">    Resume   </button></figcaption>
+          <figcaption><button onClick={()=>window.location.href="https://drive.google.com/file/d/1j2kr89f1P8KFgMn6jMv63J0O67gPwyDa/view?usp=sharing"} type="button" style={{width:"40%",height:"44px",boxShadow:useDarkMode().value?"0 1px 4px rgba(255, 255, 255, .6)":"0 1px 4px rgba(0, 0, 0, .6)"}} className="mtrl-btn">    Resume   </button></figcaption>
         </figure> 
       <p>A Full-Stack Developer based from Mathura, currently residing in Bangalore, pursuing BTech from  <strong>Bangalore Institute Of Technology</strong>.
        Talk to me about problem-solving, Crytpocurrencies, Web Development.I code in Javascript, Typescript & Java. Currently My working stack is
