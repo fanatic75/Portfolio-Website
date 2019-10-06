@@ -6,11 +6,12 @@ const projects: project[] = [
             url:"lamp.png",
             title:"Lamp",
             height:"340px",
-            backgroundSize:"contain"
+            backgroundSize:"contain",
+            website:"https://play.google.com/store/apps/details?id=com.dyfolite&hl=en_IN"
+
         },
         title:"Dyfo Lite",
-        content:"Now control your lamps with a touch of your Finger",
-        github:"https://play.google.com/store/apps/details?id=com.dyfolite&hl=en_IN"
+        content:"Now control your lamps with a touch of your Finger"
     },
     {
         key: 2,
@@ -18,11 +19,12 @@ const projects: project[] = [
             url: "bitchat.png",
             title: "Logo",
             height:"313px",
-            backgroundSize:"contain"
+            backgroundSize:"contain",
+            website:"https://bitchat.website"
         },
         title: "Bit Chat",
         content: "Shy in Life? Hang out virtually and make new Friends. Anonymous Chatting Client for Our College. ",
-        github:"https://bitchat.website"
+        github:"https://github.com/fanatic75/BitAn"
     },{
         key: 3,
         image: {
@@ -51,7 +53,8 @@ const projects: project[] = [
             url: "quiz.png",
             title: "Logo",
             height:"313px",
-            backgroundSize:"contain"
+            backgroundSize:"contain",
+            website:"https://fanatic75.github.io/QuizApp"
         },
         title: "Quiz App",
         content: "A simple yet elegant quiz app written in vanilla JS. ",

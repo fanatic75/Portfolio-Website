@@ -7,6 +7,7 @@ export interface project{
         title: string,
         height:string
         backgroundSize?: backgroundSize
+        website?:string
     },
     title: string,
     content: string,

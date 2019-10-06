@@ -3,7 +3,7 @@ import useMedia from "use-media";
 import useDarkMode from "use-dark-mode";
 import {project} from "../types/module";
 
-const Card: React.FC<project> = (props: project) => {
+const ProjectCard: React.FC<project> = (props: project) => {
     
 
     const isWide: boolean = useMedia({ minWidth: 700 });
@@ -27,14 +27,14 @@ const Card: React.FC<project> = (props: project) => {
     }
     return (
         <div style={{backgroundColor:darkMode.value?"#1e1e1e":"#fff",boxShadow:darkMode.value?" 0px 1px 3px 0px rgba(0,0,0,1), 0px 1px 1px 0px rgba(0,0,0,1), 0px 2px 1px -1px rgba(0,0,0,1)":" 0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12)"}} className="card-root">
-            <button type="button" tabIndex={0} onClick={() => props.github?window.location.href = props.github:""} className={["card-action-area-root", "base-button-root", !isWide ? "ripple" : ""].join(" ")}>
+            <button type="button" tabIndex={0} onClick={() => props.image.website?window.location.href = props.image.website:window.location.href=props.github?props.github:""} className={["card-action-area-root", "base-button-root", !isWide ? "ripple" : ""].join(" ")}>
                 <div style={props.image&&{backgroundImage:`url("/${props.image.url}")`,height:props.image.height,backgroundSize:props.image.backgroundSize?props.image.backgroundSize:"auto"}} title={props.image&&props.image.title} className="card-media-root" />
                 <div className="card-content-root">
                     <h2>{props.title}</h2>
                     <p style={{marginBottom:"0px"}}>{props.content}</p>
                 </div>
             </button>
-            <div className="card-actions-root">
+         {  (!isWide||props.github)&& <div style={{borderTop:darkMode.value?"solid 1px white":"solid 1px black"}} className="card-actions-root">
                 {
                     !isWide && <button onClick={shareMenu} type="button" tabIndex={0} className={["card-action-button", "base-button-root", !isWide ? "ripple" : ""].join(" ")}>
                         SHARE
@@ -42,14 +42,15 @@ const Card: React.FC<project> = (props: project) => {
                 }
                 {
                     //@ts-ignore
-                    <button onClick={() => props.github?window.location.href = props.github:""} type="button" tabIndex={0} className={["card-action-button", "base-button-root", !isWide ? "ripple" : ""].join(" ")}>
+                   props.github&& <button onClick={() =>window.location.href = props.github} type="button" tabIndex={0} className={["card-action-button", "base-button-root", !isWide ? "ripple" : ""].join(" ")}>
                         LEARN MORE
                 </button>
                 }
             </div>
+         }
         </div>
 
     )
 }
-export default Card;
+export default ProjectCard;
 

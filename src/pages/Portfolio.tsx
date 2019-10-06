@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout";
-import Card from "../components/Card";
+import ProjectCard from "../components/ProjectCard";
 import projects from "../data/projects";
 
 
@@ -11,7 +11,7 @@ const Portfolio: React.FC = () => {
       <div className="projects-container">
         {
           projects.map((project, i) => {
-            return <Card key={project.key} image={project.image} title={project.title} content={project.content} github={project.github} />
+            return <ProjectCard key={project.key} image={project.image} title={project.title} content={project.content} github={project.github} />
           })
         }
       </div>
