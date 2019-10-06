@@ -22,7 +22,6 @@ const Contact: React.FC = () => {
         <h3>Find me Somewhere else</h3>
         <div className="somewhere-links">
           <p><a rel="noopener noreferrer" target="_blank" style={linkStyle} href="https://github.com/fanatic75">Github</a></p>
-          <p><a rel="noopener noreferrer" target="_blank" style={linkStyle} href="https://facebook.com/fanatic75">Facebook</a></p>
           <p><a rel="noopener noreferrer" target="_blank" style={linkStyle} href="https://www.linkedin.com/in/prateek-banga-324b64141/">LinkedIn</a></p>
         </div>
           
