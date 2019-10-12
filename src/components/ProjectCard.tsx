@@ -34,7 +34,7 @@ const ProjectCard: React.FC<project> = (props: project) => {
                     <p style={{marginBottom:"0px"}}>{props.content}</p>
                 </div>
             </button>
-         {  (!isWide||props.github)&& <div style={{borderTop:darkMode.value?"solid 1px white":"solid 1px black"}} className="card-actions-root">
+         {  <div style={{borderTop:darkMode.value?"solid 1px white":"solid 1px black"}} className="card-actions-root">
                 {
                     !isWide && <button onClick={shareMenu} type="button" tabIndex={0} className={["card-action-button", "base-button-root", !isWide ? "ripple" : ""].join(" ")}>
                         SHARE
@@ -42,7 +42,7 @@ const ProjectCard: React.FC<project> = (props: project) => {
                 }
                 {
                     //@ts-ignore
-                   props.github&& <button onClick={() =>window.location.href = props.github} type="button" tabIndex={0} className={["card-action-button", "base-button-root", !isWide ? "ripple" : ""].join(" ")}>
+                    <button onClick={() =>window.location.href = props.github?props.github:props.image.website?props.image.website:null} type="button" tabIndex={0} className={["card-action-button", "base-button-root", !isWide ? "ripple" : ""].join(" ")}>
                         LEARN MORE
                 </button>
                 }
