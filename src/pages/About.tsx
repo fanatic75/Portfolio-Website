@@ -4,13 +4,20 @@ import slogan from "../assets/bat.png";
 import logo from "../assets/bat.svg";
 import Layout from "../components/Layout";
 import "../styles/about.css";
+import useDarkMode from "use-dark-mode";
 const About: React.FC = () => (
   <Layout>
     <h1 className="heading">About Me</h1>
     <div className="about-container">
 
-      <p>
-        <img className="mypicture" src={me} alt="Myself" /></p>
+        <figure>
+          {
+  
+            //@ts-ignore
+           <img className="mypicture" loading="eager" src={me} alt="Myself" />
+          }
+          <figcaption><button onClick={()=>window.location.href="https://drive.google.com/file/d/1j2kr89f1P8KFgMn6jMv63J0O67gPwyDa/view?usp=sharing"} type="button" style={{width:"40%",height:"44px",boxShadow:useDarkMode().value?"0 1px 4px rgba(255, 255, 255, .6)":"0 1px 4px rgba(0, 0, 0, .6)"}} className="mtrl-btn">    Resume   </button></figcaption>
+        </figure> 
       <p>A Full-Stack Developer based from Mathura, currently residing in Bangalore, pursuing BTech from  <strong>Bangalore Institute Of Technology</strong>.
        Talk to me about problem-solving, Crytpocurrencies, Web Development.I code in Javascript, Typescript & Java. Currently My working stack is
          ReactJS, NodeJS, NOSQL DB. In my free time, I like to listen to  rock music and read tech related news.</p>
@@ -23,7 +30,7 @@ const About: React.FC = () => (
       
      
         <a className="bat-container" href="https://brave.com/bit451">
-        <img src={slogan} width="70%"alt="Brave Slogan"/>
+        <img src={slogan} style={{transform:"scale(0.8)"}} width="70%"alt="Brave Slogan"/>
         <img src={logo} alt="BAT Token" />
         </a>
       

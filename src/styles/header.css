@@ -32,10 +32,10 @@
    
    
    .dark-border{
-    border-bottom: 2px solid #222;
+    border-bottom: thin solid #222;
    }
    .light-border{
-       border-bottom: 2px solid #f2f2f2;
+       border-bottom: thin solid #f2f2f2;
    }
 
    @media screen and (max-width:701px){
