@@ -1,16 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import useDarkMode from "use-dark-mode";
 import  "../styles/navigationRef.css";
 import {CSSTransition} from 'react-transition-group' 
+import { ThemeContext } from "../App";
 
 
 
 
 const NavigationRef = (props : {navigation:boolean}) => {
-    const darkMode =  useDarkMode();
-    const linksStyle= {color:darkMode.value?"#cbcbcb":"#212121"}
-  
+    const theme = useContext(ThemeContext);
     return (
         <CSSTransition
         in={props.navigation}
@@ -19,18 +17,18 @@ const NavigationRef = (props : {navigation:boolean}) => {
         unmountOnExit
         mountOnEnter
         >
-        <div style = {{transform:!props.navigation&&"translate3d(0,100%,0)"} as React.CSSProperties}  className={["root",darkMode.value?"dark-mode-background":"light-mode-background","remove-scrollbar"].join(" ")} >
+        <div style = {{transform:!props.navigation&&"translate3d(0,100%,0)"} as React.CSSProperties}  className={["root",theme,"remove-scrollbar"].join(" ")} >
             <div className={"linksContainer"} >
-                <Link style={linksStyle} className={"links"} to="/"><h2 className={"h2"}>HOME</h2></Link>
+                <Link  className={"links"} to="/"><h2 className={["h2",theme].join(" ")}>HOME</h2></Link>
             </div>
             <div className={"linksContainer"} >
-                <Link style={linksStyle} className={"links"} to="/about"><h2  className={"h2"}>ABOUT</h2></Link>
+                <Link  className={"links"} to="/about"><h2  className={["h2",theme].join(" ")}>ABOUT</h2></Link>
             </div>
             <div className={"linksContainer"} >
-                <Link style={linksStyle} className={"links"} to="/portfolio"><h2  className={"h2"}>PORTFOLIO</h2></Link>
+                <Link className={"links"} to="/portfolio"><h2  className={["h2",theme].join(" ")}>PORTFOLIO</h2></Link>
             </div>
             <div className={"linksContainer"} >
-                <Link  style={linksStyle} className={"links"} to="/contact"><h2  className={"h2"}>CONTACT</h2></Link>
+                <Link className={"links"} to="/contact"><h2  className={["h2",theme].join(" ")}>CONTACT</h2></Link>
             </div>
 
         </div>

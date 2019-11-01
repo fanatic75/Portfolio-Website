@@ -14,7 +14,7 @@ const About: React.FC = () => (
           {
   
             //@ts-ignore
-           <img className="mypicture" loading="eager" src={me} alt="Myself" />
+           <img className="mypicture" src={me} alt="Myself" />
           }
           <figcaption><button onClick={()=>window.location.href="https://drive.google.com/file/d/1j2kr89f1P8KFgMn6jMv63J0O67gPwyDa/view?usp=sharing"} type="button" style={{width:"40%",height:"44px",boxShadow:useDarkMode().value?"0 1px 4px rgba(255, 255, 255, .6)":"0 1px 4px rgba(0, 0, 0, .6)"}} className="mtrl-btn">    Resume   </button></figcaption>
         </figure> 
