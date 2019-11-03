@@ -269,11 +269,13 @@ body {
 body.dark-mode,body .dark-mode{
   background-color:#121212 !important;
   color: #cbcbcb !important;
+  transition: background-color 0.3s ease ;
+
 }
 body.light-mode,body .light-mode{
   background-color: #fafafa !important; 
   color: #333 !important;
-  transition: background-color 0.3s ease !important;
+  transition: background-color 0.3s ease ;
 }
 
 button{
