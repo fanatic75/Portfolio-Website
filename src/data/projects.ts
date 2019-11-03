@@ -25,8 +25,20 @@ const projects: project[] = [
         title: "Bit Chat",
         content: "Shy in Life? Hang out virtually and make new Friends. Anonymous Chatting Client for Our College. ",
         github:"https://github.com/fanatic75/BitAn"
-    },{
+    },
+    {
         key: 3,
+        image: {
+            url: "layoutdesigner.gif",
+            title: "Real Time Layout Designer",
+            height:"313px",
+            backgroundSize:"contain"
+        },
+        title: "Real Time Layout Designer",
+        content: "A layout designer built to increase productivity and to automate the designing System.",
+        
+    },{
+        key: 4,
         image: {
             url: "blockchain.png",
             title: "Blockchain explanation",
@@ -37,7 +49,7 @@ const projects: project[] = [
         content: "A Blockchain written in java which uses SHA256 algorithm for hashing. Block Difficulty can be increased.",
         github:"https://github.com/fanatic75/Basic-Blockchain.git"
     },{
-        key: 4,
+        key: 5,
         image: {
             url: "breakout.gif",
             title: "Breakout Game",
@@ -48,7 +60,7 @@ const projects: project[] = [
         content: "Breakout, a game built in java when I was taking the class of Prof. Mehran Sahami. Best Teacher of my life, hands down.",
         github:"https://github.com/fanatic75/Breakout.git"
     },{
-        key: 5,
+        key: 6,
         image: {
             url: "quiz.png",
             title: "Logo",

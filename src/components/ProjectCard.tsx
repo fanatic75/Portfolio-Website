@@ -42,7 +42,7 @@ const ProjectCard: React.FC<project> = (props: project) => {
                 }
                 {
                     //@ts-ignore
-                    <button onClick={() =>window.location.href = props.github?props.github:props.image.website?props.image.website:null} type="button" tabIndex={0} className={["card-action-button", "base-button-root", !isWide ? "ripple" : ""].join(" ")}>
+                    <button onClick={() =>window.location.href = props.github?props.github:props.image.website?props.image.website:""} type="button" tabIndex={0} className={["card-action-button", "base-button-root", !isWide ? "ripple" : ""].join(" ")}>
                         LEARN MORE
                 </button>
                 }
