@@ -465,16 +465,20 @@ strong {
 
 .fadeInUp-enter {
   opacity: 0;
-  transform: translate3d(0,100%,0);
+  transform: translate3d(0,100vh,0);
 }
 .fadeInUp-enter.fadeInUp-enter-active{
   opacity:1;
-  transform: translate3d(0, 0%, 0);
+  transform: translate3d(0, 0vh, 0);
   transition: all 500ms ease-in;
 
 }
-.fadeInUp-exit-done{
-  opacity: 0;
+.fadeInUp-exit.fadeInUp-exit-active{
+  transform: translate3d(0,100vh,0);
+  transition: all 500ms ease-in;
 
   
+}
+.fadeInUp-exit-done{
+  opacity: 0;
 }

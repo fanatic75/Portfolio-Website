@@ -12,12 +12,13 @@ const NavigationRef = (props : {navigation:boolean}) => {
     return (
         <CSSTransition
         in={props.navigation}
+        
         classNames="fadeInUp"
         timeout={{appear:100,enter:400,exit:300}}
         unmountOnExit
         mountOnEnter
         >
-        <div style = {{transform:!props.navigation&&"translate3d(0,100%,0)"} as React.CSSProperties}  className={["root",theme,"remove-scrollbar"].join(" ")} >
+        <div className={["root",theme,"remove-scrollbar"].join(" ")} >
             <div className={"linksContainer"} >
                 <Link  className={"links"} to="/"><h2 className={["h2",theme].join(" ")}>HOME</h2></Link>
             </div>
