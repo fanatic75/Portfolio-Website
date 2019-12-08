@@ -10,7 +10,7 @@ const Portfolio: React.FC = () => {
       <h1 className="heading">Projects</h1>
       <div className="projects-container">
         {
-          projects.map((project, i) => {
+          projects.reverse().map((project, i) => {
             return <ProjectCard key={project.key} image={project.image} title={project.title} content={project.content} github={project.github} />
           })
         }
