@@ -85,4 +85,4 @@ const projects: project[] = [
         content: "An Inventory Management System with all the industry standards and  Admin panel built in with the App. Available for Android/IOS."
     }
 ];
-export default projects;
+export default projects.reverse();
