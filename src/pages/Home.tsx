@@ -1,12 +1,9 @@
 import React from "react"
 import Layout from "../components/Layout"
 import "../styles/home.css";
-import Particles from 'react-particles-js';
-import useMedia from "use-media";
 import useDarkMode from 'use-dark-mode';
 const IndexPage:React.FC = () => {
   const darkMode = useDarkMode();
-  const isWide: boolean = useMedia({ minWidth: 800 });
   return (
   <Layout>
    

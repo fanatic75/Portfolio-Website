@@ -427,6 +427,7 @@ p {
   padding-top: 0;
   word-spacing: 2.5px;
   font-size:1.2rem;
+  text-align:justify;
 }
 noscript {
   margin-left: 0;
