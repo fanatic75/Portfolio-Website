@@ -1,7 +1,7 @@
 import React from "react"
 import me from '../assets/my_picture.jpg';
-import slogan from "../assets/bat.png";
-import logo from "../assets/bat.svg";
+//import slogan from "../assets/bat.png";
+//import logo from "../assets/bat.svg";
 import Layout from "../components/Layout";
 import "../styles/about.css";
 import useDarkMode from "use-dark-mode";
@@ -22,7 +22,7 @@ const About: React.FC = () => (
        Talk to me about problem-solving, Crytpocurrencies, Web Development.I code in Javascript, Typescript & Java. Currently My working stack is
          ReactJS, NodeJS, NOSQL DB. In my free time, I like to listen to  rock music and read tech related news.</p>
     </div>
-    <div className="support-container">
+    {/* <div className="support-container">
 
       <h2>Support Me</h2>
       <br />
@@ -34,7 +34,7 @@ const About: React.FC = () => (
         <img src={logo} alt="BAT Token" />
         </a>
       
-    </div>
+    </div> */}
   </Layout>
 )
 
