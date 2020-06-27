@@ -38,8 +38,9 @@
     "gatsby"
   ],
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build & ts-node server.ts",
+    "start": "ndoe server.js",
+    "build": "react-scripts build & tsc server.ts",
+    "postinstall": "npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
