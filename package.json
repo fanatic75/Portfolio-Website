@@ -38,7 +38,7 @@
     "gatsby"
   ],
   "scripts": {
-    "start": "ndoe server.js",
+    "start": "node server.js",
     "build": "react-scripts build & tsc server.ts",
     "postinstall": "npm run build",
     "test": "react-scripts test",
