@@ -81,7 +81,8 @@ const projects: project[] = [
             website: "https://github.com/fanatic75/InventoryManagementApp"
         },
         title: "Inventory Management System",
-        content: "An Inventory Management System with all the industry standards and  Admin panel built in with the App. Available for Android/IOS."
+        content: "An Inventory Management System with all the industry standards and  Admin panel built in with the App. Available for Android.",
+        github: "https://github.com/fanatic75/InventoryManagementApp"
     }
 ];
 export default projects.reverse();
