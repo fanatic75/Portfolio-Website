@@ -60,18 +60,6 @@ const projects: project[] = [
         content: "Shy in Life? Hang out virtually and make new Friends. Anonymous Chatting Client for Our College. ",
         github: "https://github.com/fanatic75/BitAn"
     }, {
-        key: 6,
-        image: {
-            url: "lamp.png",
-            title: "Lamp",
-            height: "340px",
-            backgroundSize: "contain",
-            website: "https://play.google.com/store/apps/details?id=com.dyfolite&hl=en_IN"
-
-        },
-        title: "Dyfo Lite",
-        content: "Now control your lamps with a touch of your Finger"
-    }, {
         key: 7,
         image: {
             url: "inventory_management_system.gif",
