@@ -71,6 +71,19 @@ const projects: project[] = [
         title: "Inventory Management System",
         content: "An Inventory Management System with all the industry standards and  Admin panel built in with the App. Available for Android.",
         github: "https://github.com/fanatic75/InventoryManagementApp"
+    },{
+        key: 8,
+        image: {
+            url: "AsteroidExplorer.png",
+            title: "Asteroid Explorer",
+            height: "340px",
+            backgroundSize: "contain",
+            website: "https://nervous-mccarthy-ab869d.netlify.app/"
+        },
+        title: "Asteroid Explorer",
+        content: "Asteroid Explorer is a web app using NASA Asteroid API",
+        github: "https://github.com/fanatic75/Asteroid"
+
     }
 ];
 export default projects.reverse();
