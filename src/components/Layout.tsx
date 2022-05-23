@@ -10,13 +10,7 @@ const Layout : any = ( props : {children:HTMLElement}) => {
   const isWide: boolean = useMedia({ minWidth: 700 });
 
   const [navigation, showNavigation] = useState(false);
-  useEffect(()=>{
-    const body=document.body.style;
-    navigation? body.overflow="hidden":body.overflow="initial";
-      
-
-  },[navigation]);
-
+  
 
   const buttonNav = <ButtonNav navigation={navigation} className={"buttonNav"} showNavigation={showNavigation} />
 
