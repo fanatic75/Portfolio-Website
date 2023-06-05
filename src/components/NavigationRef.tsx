@@ -22,9 +22,7 @@ const NavigationRef = (props : {navigation:boolean}) => {
             <div className={"linksContainer"} >
                 <Link  className={"links"} to="/"><h2 className={["h2",theme].join(" ")}>HOME</h2></Link>
             </div>
-            <div className={"linksContainer"} >
-                <Link  className={"links"} to="/about"><h2  className={["h2",theme].join(" ")}>ABOUT</h2></Link>
-            </div>
+            
             <div className={"linksContainer"} >
                 <Link className={"links"} to="/portfolio"><h2  className={["h2",theme].join(" ")}>PORTFOLIO</h2></Link>
             </div>
