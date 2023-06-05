@@ -29,7 +29,7 @@ const Header = () => {
     <nav >
       {isWide && <ul>
         <li className="a-decoration"><Link to="/"><h2  className={theme}>Home</h2></Link></li>
-        <li className="a-decoration"><Link to="/about" ><h2 className={theme}>About</h2></Link></li>
+     
         <li className="a-decoration"><Link to="/portfolio"><h2 className={theme}>Portfolio</h2></Link></li>
         <li className="a-decoration"><Link to="/contact"><h2 className={theme}>Contact</h2></Link></li>
       </ul>}
