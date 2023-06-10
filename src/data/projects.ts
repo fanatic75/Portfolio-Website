@@ -54,7 +54,7 @@ const projects: project[] = [
             title: "Logo",
             height: "313px",
             backgroundSize: "contain",
-            website: "https://bitan.herokuapp.com"
+            website: "https://bit-chat.onrender.com"
         },
         title: "Bit Chat",
         content: "Shy in Life? Hang out virtually and make new Friends. Anonymous Chatting Client for Our College. ",
